@@ -42,7 +42,7 @@ def getContinuousDays(session):
     soup = BeautifulSoup(c.text,"html.parser")
     day = soup.select("body > div.signInMiddleWrapper > div > div.signInTimeInfo > div.signInTimeInfoMiddle > p.signInTimeMiddleBtn")
     day = day[0].get_text()
-    url_push = "https://sc.ftqq.com/%s.send"%PUSH_KEY
+    url_push = "https://sctapi.ftqq.com/%s.send"%PUSH_KEY
     push_data = {
         "text":"联想商城签到情况：%s"%day
     }
